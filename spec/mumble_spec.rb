@@ -76,4 +76,34 @@ it "returns 'X', when passed letter 'X'" do
       expect(result).to eq(expected_result)
     end
   end
+
+  context 'define_mumble with three letters passed' do
+    it "returns 'A-Bb-Ccc', when passed letter 'abc'" do
+      # Arrange
+      expected_result = 'A-Bb-Ccc'
+      # Act
+      result = subject.mumble_letters('abc')
+      # Assert
+      expect(result).to eq(expected_result)
+    end
+
+    it "returns 'A-Bb-Ddd', when passed letter 'abd'" do
+      # Arrange
+      expected_result = 'A-Bb-Ddd'
+      # Act
+      result = subject.mumble_letters('abd')
+      # Assert
+      expect(result).to eq(expected_result)
+    end
+
+    it "returns 'E-Bb-Ddd', when passed letter 'ebd'" do
+      # Arrange
+      expected_result = 'E-Bb-Ddd'
+      # Act
+      result = subject.mumble_letters('ebd')
+      # Assert
+      expect(result).to eq(expected_result)
+    end
+  end
+
 end
