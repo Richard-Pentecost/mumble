@@ -10,6 +10,15 @@ describe Mumble do
       # Assert
       expect(result).to eq(expected_result)
     end
+
+    it 'returns an empty string, when no argument is passed' do
+      # Arrange
+      expected_result = ''
+      # Act
+      result = subject.mumble_letters()
+      # Assert
+      expect(result).to eq(expected_result)
+    end
   end
   
   context 'define_mumble with one letter passed' do
