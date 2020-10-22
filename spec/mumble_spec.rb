@@ -106,4 +106,23 @@ it "returns 'X', when passed letter 'X'" do
     end
   end
 
+  context 'define_mumble with more than 3 letters' do
+    it "returns 'A-Bb-Ccc-Dddd', when passed 'aBCd'" do
+        # Arrange
+        expected_result = 'A-Bb-Ccc-Dddd'
+        # Act
+        result = subject.mumble_letters('aBCd')
+        # Assert
+        expect(result).to eq(expected_result)
+    end
+
+    it "returns 'Q-Ww-Eee-Rrrr-Ttttt-Yyyyyy', when passed 'QWERTY'" do
+      # Arrange
+      expected_result = 'Q-Ww-Eee-Rrrr-Ttttt-Yyyyyy'
+      # Act
+      result = subject.mumble_letters('QWERTY')
+      # Assert
+      expect(result).to eq(expected_result)
+  end
+  end
 end
