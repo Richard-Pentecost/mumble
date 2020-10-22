@@ -1,6 +1,17 @@
 require_relative '../lib/mumble'
 
 describe Mumble do
+  context 'define_mumble handles an empty string' do
+    it 'returns an empty string, when passed an empty string' do
+      # Arrange
+      expected_result = ''
+      # Act
+      result = subject.mumble_letters('')
+      # Assert
+      expect(result).to eq(expected_result)
+    end
+  end
+  
   context 'define_mumble with one letter passed' do
     it "returns 'A', when passed letter 'a'" do
       # Arrange
