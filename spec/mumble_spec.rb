@@ -37,17 +37,43 @@ it "returns 'X', when passed letter 'X'" do
       # Assert
       expect(result).to eq(expected_result)
     end
-    
   end
 
-  # context 'define_mumble with two letters passed' do
-  #   it "returns 'A', when passed letter 'a'" do
-  #     # Arrange
-  #     expected_result = 'A-Bb'
-  #     # Act
-  #     result = subject.mumble_letters('ab')
-  #     # Assert
-  #     expect(result).to eq(expected_result)
-  #   end
-  # end
+  context 'define_mumble with two letters passed' do
+    it "returns 'A-Bb', when passed letter 'ab'" do
+      # Arrange
+      expected_result = 'A-Bb'
+      # Act
+      result = subject.mumble_letters('ab')
+      # Assert
+      expect(result).to eq(expected_result)
+    end
+
+    it "returns 'B-Cc', when passed letter 'bc'" do
+      # Arrange
+      expected_result = 'B-Cc'
+      # Act
+      result = subject.mumble_letters('bc')
+      # Assert
+      expect(result).to eq(expected_result)
+    end
+
+    it "returns 'X-Yy', when passed letter 'xy'" do
+      # Arrange
+      expected_result = 'X-Yy'
+      # Act
+      result = subject.mumble_letters('xy')
+      # Assert
+      expect(result).to eq(expected_result)
+    end
+
+    it "returns 'X-Zz', when passed letter 'xZ'" do
+      # Arrange
+      expected_result = 'X-Zz'
+      # Act
+      result = subject.mumble_letters('xZ')
+      # Assert
+      expect(result).to eq(expected_result)
+    end
+  end
 end
