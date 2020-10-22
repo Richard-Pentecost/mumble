@@ -1,5 +1,7 @@
 class Mumble 
-  def mumble_letters(_)
-    'A'
+
+  def mumble_letters(string)
+    return string.upcase
   end
+  
 end
